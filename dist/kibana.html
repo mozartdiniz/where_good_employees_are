@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Where the good emplyees come from</title>
+
+  <link rel="stylesheet" href="leaflet.css" />
+  <link rel="stylesheet" href="MarkerCluster.css" />
+  <link rel="stylesheet" href="MarkerCluster.Default.css" />
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+
+<section>
+  <aside>
+    <ul>
+      <li><a href="index.html">Map View</a></li>
+      <li><a href="chart_one.html">Pie Charts</a></li>
+      <li><a href="bubbles-visualization/chart.html">Bubble Charts</a></li>
+      <li><a href="kibana.html">Candidates by country over time</a></li>
+    </ul>
+  </aside>
+  <section>
+    <iframe frameborder="0" src="https://kibana.endouble.net/app/kibana#/visualize/create?embed=true&type=line&indexPattern=logstash-access*&_g=(refreshInterval:(display:Off,pause:!f,value:0),time:(from:'2016-09-30T22:00:00.000Z',mode:absolute,to:'2016-10-20T12:18:44.597Z'))&_a=(filters:!(),linked:!f,query:(query_string:(analyze_wildcard:!t,query:'app:booking%20AND%20geoip.country_code2.raw:(US%20NL%20GB%20DE%20FR%20IT)')),uiState:(spy:(mode:(fill:!f,name:table))),vis:(aggs:!((id:'1',params:(customLabel:unique_visitor_count,field:geoip.ip),schema:metric,type:cardinality),(id:'2',params:(customInterval:'2h',customLabel:date,extended_bounds:(),field:'@timestamp',interval:d,min_doc_count:1),schema:segment,type:date_histogram),(id:'3',params:(customLabel:country,field:geoip.country_code2.raw,order:desc,orderBy:'1',size:10),schema:group,type:terms)),listeners:(),params:(addLegend:!t,addTimeMarker:!f,addTooltip:!t,defaultYExtents:!f,drawLinesBetweenPoints:!t,interpolate:linear,radiusRatio:9,scale:linear,setYExtents:!f,shareYAxis:!t,showCircles:!t,smoothLines:!f,times:!(),yAxis:()),title:'New%20Visualization',type:line))" height="600" width="800"></iframe>
+  </section>
+</section>
+
+<script src="/static/bundle.js"></script>
+</body>
+</html>
