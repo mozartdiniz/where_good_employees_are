@@ -6,7 +6,7 @@ export default class MapVisualization {
 
   constructor() {
     this.map = Leaflet.map('map', {
-      center: [51.505, -0.09],
+      center: [52.3882127, 4.9204737],
       zoom: 7,
       maxZoom: 22
     });
