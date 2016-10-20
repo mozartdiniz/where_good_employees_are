@@ -5,28 +5,33 @@ import ElastiSearchGeohash from './elastic_search_geohash';
 export default class MapVisualization {
 
   constructor() {
-    this.map = Leaflet.map('map', {
-      center: [52.3882127, 4.9204737],
-      zoom: 7,
-      maxZoom: 22
-    });
+    try {
+      this.map = Leaflet.map('map', {
+        center: [52.3882127, 4.9204737],
+        zoom: 7,
+        maxZoom: 22
+      });
 
-    // Base layer
-    L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
-      maxZoom: 18,
-      attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-      '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-      'Imagery © <a href="http://mapbox.com">Mapbox</a>',
-      id: 'mapbox.streets'
-    }).addTo(this.map);
+      // Base layer
+      L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpandmbXliNDBjZWd2M2x6bDk3c2ZtOTkifQ._QA7i5Mpkd_m30IGElHziw', {
+        maxZoom: 18,
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
+        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+        'Imagery © <a href="http://mapbox.com">Mapbox</a>',
+        id: 'mapbox.streets'
+      }).addTo(this.map);
 
-    ElastiSearchGeohash.getData(
-      this.prepareToGetData(this.map),
-      (json) => {
-        this.clearTheMap();
-        this.transformingData(json);
-      }
-    )
+      ElastiSearchGeohash.getData(
+        this.prepareToGetData(this.map),
+        (json) => {
+          this.clearTheMap();
+          this.transformingData(json);
+        }
+      )
+    } catch (err) {
+
+    }
+
 
   }
 
@@ -51,25 +56,27 @@ export default class MapVisualization {
 
   addEventListeners() {
 
-    this.map.on('moveend', () => {
-      ElastiSearchGeohash.getData(
-        this.prepareToGetData(this.map),
-        (json) => {
-          this.clearTheMap();
-          this.transformingData(json);
-        }
-      );
-    });
+    if (this.map) {
+      this.map.on('moveend', () => {
+        ElastiSearchGeohash.getData(
+          this.prepareToGetData(this.map),
+          (json) => {
+            this.clearTheMap();
+            this.transformingData(json);
+          }
+        );
+      });
 
-    this.map.on('zoomend', () => {
-      ElastiSearchGeohash.getData(
-        this.prepareToGetData(this.map),
-        (json) => {
-          this.clearTheMap();
-          this.transformingData(json);
-        }
-      );
-    });
+      this.map.on('zoomend', () => {
+        ElastiSearchGeohash.getData(
+          this.prepareToGetData(this.map),
+          (json) => {
+            this.clearTheMap();
+            this.transformingData(json);
+          }
+        );
+      });
+    }
 
   }
 

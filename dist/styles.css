@@ -1,10 +1,21 @@
 body {
     margin: 0;
+    font-family: sans-serif;
+}
+
+.chart {
+    float: left;
+    margin-left: 60px;
 }
 
 section {
     display: block;
+    position: relative;
     float: left;
+}
+
+section > section {
+    width: calc(100vw - 200px);
 }
 
 aside {
