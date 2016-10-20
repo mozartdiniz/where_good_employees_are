@@ -29,9 +29,9 @@ Example:
       }
     },
     "id": 261,
-    "budget_2012": 9000000, // 9 years * 1 000 000
+    "budget_2012": 9,
     "change": 0.25, // this will generated a certain colour related to the Netherlands
-    "budget_2013": 9100000, //just in order to have a change
+    "budget_2013": 9, // average employment duration 9 years
     "department": "Netherlands",
     "discretion": "Mandatory" //can be Mandatory or Discretionary, I will convert them to senior/junior
   },
