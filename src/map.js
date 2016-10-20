@@ -7,8 +7,8 @@ export default class MapVisualization {
   constructor() {
     this.map = Leaflet.map('map', {
       center: [51.505, -0.09],
-      zoom: 13,
-      maxZoom: 18
+      zoom: 7,
+      maxZoom: 22
     });
 
     // Base layer
@@ -20,7 +20,13 @@ export default class MapVisualization {
       id: 'mapbox.streets'
     }).addTo(this.map);
 
-    console.log(this.map._layers);
+    ElastiSearchGeohash.getData(
+      this.prepareToGetData(this.map),
+      (json) => {
+        this.clearTheMap();
+        this.transformingData(json);
+      }
+    )
 
   }
 
@@ -85,11 +91,55 @@ export default class MapVisualization {
 
         var bounds = [[point.latitude[0], point.longitude[0]], [point.latitude[1], point.longitude[1]]];
 
-        // create an orange rectangle
-        L.rectangle(bounds, {color: "#ff7800", weight: 1}).addTo(this.map);
+        let ret = L.rectangle(bounds, {
+          color: this.colorByDocCount(data[i].doc_count),
+          weight: 1,
+          fillOpacity: 0.7,
+        });
+
+        ret.bindPopup(`Candidates: <strong>${data[i].doc_count}</strong><br>
+                      You can add more data: <strong>Data</strong>` );
+
+        ret.addTo(this.map);
 
       }
     }
+  }
+
+  colorByDocCount(docCount) {
+
+    let color = '';
+
+    switch (true) {
+      case (docCount > 10000000):
+        color = '#7f0000';
+        break;
+      case (docCount > 1000000):
+        color = '#b30000';
+        break;
+      case (docCount > 100000):
+        color = '#d7301f';
+        break;
+      case (docCount > 10000):
+        color = '#ef6548';
+        break;
+      case (docCount > 1000):
+        color = '#fc8d59';
+        break;
+      case (docCount > 100):
+        color = '#fdbb84';
+        break;
+      case (docCount > 10):
+        color = '#fdd49e';
+        break;
+      case (docCount >= 1):
+        color = '#fee8c8';
+        break;
+      default:
+        color = '#fff7ec';
+    }
+
+    return color;
   }
 
   render() {
