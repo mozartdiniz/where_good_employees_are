@@ -24,16 +24,18 @@ export default class SimpleChart {
             {
               data: [7, 86, 340, 782, 674],
               backgroundColor: [
-                "#ff0000",
-                "#ff7200",
-                "#fffa00",
-                "#059b00",
-                "#0086ce"
+                "#d84b2a",
+                "#ee9586",
+                "#e4b7b2",
+                "#9caf84",
+                "#7aa25c"
               ],
               hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+                "#c73e1e",
+                "#c73e1e",
+                "#cf9d98",
+                "#688b4d",
+                "#688b4d"
               ]
             }]
         }
@@ -55,16 +57,18 @@ export default class SimpleChart {
             {
               data: [13, 118, 420, 974, 844],
               backgroundColor: [
-                "#ff0000",
-                "#ff7200",
-                "#fffa00",
-                "#059b00",
-                "#0086ce"
+                "#d84b2a",
+                "#ee9586",
+                "#e4b7b2",
+                "#9caf84",
+                "#7aa25c"
               ],
               hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+                "#c73e1e",
+                "#c73e1e",
+                "#cf9d98",
+                "#688b4d",
+                "#688b4d"
               ]
             }]
         }
@@ -86,16 +90,18 @@ export default class SimpleChart {
             {
               data: [10, 82, 288, 467, 370],
               backgroundColor: [
-                "#ff0000",
-                "#ff7200",
-                "#fffa00",
-                "#059b00",
-                "#0086ce"
+                "#d84b2a",
+                "#ee9586",
+                "#e4b7b2",
+                "#9caf84",
+                "#7aa25c"
               ],
               hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+                "#c73e1e",
+                "#c73e1e",
+                "#cf9d98",
+                "#688b4d",
+                "#688b4d"
               ]
             }]
         }
@@ -117,16 +123,18 @@ export default class SimpleChart {
             {
               data: [74, 484, 1827, 3715, 2506],
               backgroundColor: [
-                "#ff0000",
-                "#ff7200",
-                "#fffa00",
-                "#059b00",
-                "#0086ce"
+                "#d84b2a",
+                "#ee9586",
+                "#e4b7b2",
+                "#9caf84",
+                "#7aa25c"
               ],
               hoverBackgroundColor: [
-                "#FF6384",
-                "#36A2EB",
-                "#FFCE56"
+                "#c73e1e",
+                "#c73e1e",
+                "#cf9d98",
+                "#688b4d",
+                "#688b4d"
               ]
             }]
         }

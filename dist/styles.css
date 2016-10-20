@@ -18,6 +18,10 @@ section > section {
     width: calc(100vw - 200px);
 }
 
+h1 {
+    color: gray;
+}
+
 aside {
     display: block;
     float: left;
