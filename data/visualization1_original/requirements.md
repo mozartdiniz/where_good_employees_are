@@ -9,3 +9,29 @@
     - a change <= 0.05 generates 0
     - a change <= 0.25 generates 2
     - anything bigger than that generates 3
+
+
+2. In order to use (more or less) the same bubble radius, we will need:
+
+- to use the average employment duration value for the key "budget_2012"
+
+Example:
+{
+    "name": "Hilversum",
+    "positions": {
+      "total": {
+        "x": 553,
+        "y": 318
+      },
+      "department": {
+        "x": 446,
+        "y": 262
+      }
+    },
+    "id": 261,
+    "budget_2012": 9000000, // 9 years * 1 000 000
+    "change": 0.25, // this will generated a certain colour related to the Netherlands
+    "budget_2013": 9100000, //just in order to have a change
+    "department": "Netherlands",
+    "discretion": "Mandatory" //can be Mandatory or Discretionary, I will convert them to senior/junior
+  },
