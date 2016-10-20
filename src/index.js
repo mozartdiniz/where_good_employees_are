@@ -1,5 +1,7 @@
-let thing = () => {
-  console.log('works');
-};
+import MapVisualisation from './map';
+import SimpleChart from './simple_chart';
 
-thing();
+const mapVisualisation = new MapVisualisation();
+mapVisualisation.render();
+
+new SimpleChart();

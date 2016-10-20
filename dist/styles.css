@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.chart {
+    float: left;
+    margin-left: 60px;
+}
+
+section {
+    display: block;
+    position: relative;
+    float: left;
+}
+
+section > section {
+    width: calc(100vw - 200px);
+}
+
+h1 {
+    color: gray;
+}
+
+aside {
+    display: block;
+    float: left;
+    width: 200px;
+}
+
+aside ul li {
+    list-style: none;
+    margin: 10px 0 10px 0;
+}
+
+aside ul li a {
+    font-family: sans-serif;
+    color: gray;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+#map {
+    width: calc(100vw - 200px);
+    height: calc(100vh - 50px);
+}
+
+#colors {
+    position: relative;
+    float: left;
+}
+
+.circle {
+    background: red;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    float: left;
+    margin: 7px;
+}
+
+.label {
+    position: relative;
+    float: left;
+    color: gray;
+    font-family: sans-serif;
+    font-size: 12px;
+    padding-top: 10px;
+}
