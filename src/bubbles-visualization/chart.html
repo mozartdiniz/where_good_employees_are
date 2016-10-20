@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Where do good employees come from Bubble visualization</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" type="text/css" href="css/chart.css">
+</head>
+<body id="interactiveABC">
+
+    <div id="interactiveFreeFormMain">
+        <div class="nytg">
+            <!--[if IE 6]>
+            <div id="nytg-error">
+                <p>This interactive graphic requires a browser with SVG support, such as <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a>, <a href="http://www.apple.com/safari/download/">Safari</a> or the latest <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a>. </p>
+                <img src="http://graphics8.nytimes.com/packages/images/newsgraphics/2012/0202-federal-budget/error.png" width="970" alt="Error">
+                <div id="nytg-chartFrame" style="display:none;">
+            <![endif]-->
+            <!--[if IE 7]>
+            <div id="nytg-error">
+                <p>This interactive graphic requires a browser with SVG support, such as <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a>, <a href="http://www.apple.com/safari/download/">Safari</a> or the latest <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a>. </p>
+                <img src="http://graphics8.nytimes.com/packages/images/newsgraphics/2012/0202-federal-budget/error.png" width="970" alt="Error">
+                <div id="nytg-chartFrame" style="display:none;">
+            <![endif]-->
+            <!--[if IE 8]>
+            <div id="nytg-error">
+                <p>This interactive graphic requires a browser with SVG support, such as <a href="http://www.google.com/chrome">Chrome</a>, <a href="http://www.mozilla.org/en-US/firefox/">Firefox</a>, <a href="http://www.apple.com/safari/download/">Safari</a> or the latest <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home">Internet Explorer 9</a>. </p>
+                <img src="http://graphics8.nytimes.com/packages/images/newsgraphics/2012/0202-federal-budget/error.png" width="970" alt="Error">
+                <div id="nytg-chartFrame" style="display:none;">
+            <![endif]-->
+            <!--[if IE 9]>
+            <div id="nytg-chartFrame">
+            <![endif]-->
+            <![if !IE]><div id="nytg-chartFrame"><![endif]>
+            <div id="nytg-chart">
+                <div class="nytg-navBar">
+                    <div id="nytg-search" style="display:none;"></div>
+                    <ul class="nytg-navigation clearfix">
+                        <li id="nytg-nav-all">All Spending</li>
+                        <li id="nytg-nav-mandatory">Types of Spending</li>
+                        <li id="nytg-nav-discretionary">Changes</li>
+                        <li id="nytg-nav-deparment">Department Totals</li>
+                        <!--<li id="nytg-nav-comparison">Historical</li> -->
+                    </ul>
+                </div>
+                <div id="nytg-tooltip">
+                    <div id="nytg-tooltipContainer">
+                        <div class="nytg-department"></div>
+                        <div class="nytg-rule"></div>
+                        <div class="nytg-name"></div>
+                        <div class="nytg-discretion"></div>
+                        <div class="nytg-valuesContainer">
+                            <span class="nytg-value"></span>
+                            <span class="nytg-change"></span>
+                        </div>
+                        <div class="nytg-chart"></div>
+                        <div class="nytg-tail"></div>
+                    </div>
+                </div>
+                <div id="nytg-overlays">
+                    <div class="nytg-overlay" id="nytg-totalOverlay" >
+                        <div class="nytg-overview">
+                            <h5>How $3.7 Trillion Is Spent</h5>
+                            <p>Mr. Obama's budget proposal includes $3.7 trillion in spending in 2013, and forecasts a $901 billion deficit.</p>
+                            <svg id="nytg-deficitCircle"></svg>
+                        </div>
+                        <div class="nytg-aside">
+                            <p>The proposal forecasts a $901 billion deficit.</p>
+                        </div>
+                        <div class="nytg-increasesLabel">
+                            <span>Largest Increases</span>
+                        </div>
+                        <div class="nytg-decreasesLabel">
+                            <span>Largest Cuts</span>
+                        </div>
+                        <div id="nytg-colorKey">
+                            <p>Circles are sized according to the proposed spending.</p>
+                            <div id="nytg-sizeKey">
+                                <div style="left:52px;top:10px;width:20px;" class="nytg-circleKeyLabel"><span style="left:25px;">$100 billion</span></div>
+                                <div style="left:32px;top:42px;" class="nytg-circleKeyLabel"><span>$10 billion</span></div>
+                                <div style="left:32px;top:57px;" class="nytg-circleKeyLabel"><span>$1 billion</span></div>
+                                <svg id="nytg-scaleKey"></svg>
+                            </div>
+                            <p>Color shows amount of cut or increase from 2012.</p>
+                            <ul class="nytg-colorSwatches">
+                                <li class="change-decrease3"></li>
+                                <li class="change-decrease2"></li>
+                                <li class="change-decrease1"></li>
+                                <li class="change-increase1"></li>
+                                <li class="change-increase2"></li>
+                                <li class="change-increase3"></li>
+                            </ul>
+                            <ul class="nytg-colorTicks">
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="nytg-colorLabels">
+                                <li>&ndash;25%</li>
+                                <li>&ndash;5%</li>
+                                <li>0</li>
+                                <li>+5%</li>
+                                <li>+25%</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="nytg-overlay" id="nytg-mandatoryOverlay" >
+                        <div class="nytg-mandatoryExplainer">
+                        </div>
+                        <div class="nytg-mandatoryAside">
+                            <h5>Mandatory</h5>
+                            <p><strong style="font-size:16px;padding-bottom:4px;display:block;">$2.5 trillion</strong></p>
+                            <p>About 70 percent of budgetary spending is controlled by existing laws, including entitlements like Medicare, Medicaid and Social Security.</p>
+                        </div>
+                        <div class="nytg-discretionaryExplainer">
+                        </div>
+                        <div class="nytg-discretionaryAside">
+                            <h5>Discretionary</h5>
+                            <p><strong style="font-size:16px;padding-bottom:4px;display:block;">$1.1 trillion</strong></p>
+                            <p>Only about 30 percent of the budget is controlled by the annual budget process. Last August, the White House and Congress agreed to a cap on this spending.</p>
+                        </div>
+                    </div>
+                    <div class="nytg-overlay" id="nytg-discretionaryOverlay" >
+                        <div id="nytg-discretionaryIntro">
+                            <h5>Changes to Discretionary Spending</h5>
+                            <p>Discretionary spending is controlled by the annual budget process. The White House and Congress agreed to a cap in spending in August, so proposed increases in categories like education and energy require cuts in other areas.</p>
+                        </div>
+                    </div>
+                    <div class="nytg-overlay" id="nytg-departmentOverlay" >
+                        <p class="nytg-emptyCircleLabel">Empty circles show income.</p>
+                    </div>
+                    <div class="nytg-overlay" id="nytg-comparisonOverlay" >
+                        <h5>Comparison Overlay</h5>
+                    </div>
+                </div>
+                <div id="nytg-chartCanvas"></div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<script src="js/chart.js"></script>
+<script src="js/tooltip.js"></script>
+</body>
+</html>
+
+
