@@ -1,5 +1,4 @@
-let thing = () => {
-  console.log('works');
-};
+import MapVisualisation from './map';
 
-thing();
+const mapVisualisation = new MapVisualisation();
+mapVisualisation.render();

@@ -44,5 +44,10 @@
   "bugs": {
     "url": "https://github.com/Endouble/JS-Training/issues"
   },
-  "homepage": "https://github.com/Endouble/JS-Training#readme"
+  "homepage": "https://github.com/Endouble/JS-Training#readme",
+  "dependencies": {
+    "geohash": "0.0.1",
+    "leaflet": "^1.0.1",
+    "leaflet.markercluster": "^1.0.0"
+  }
 }
