@@ -185,7 +185,7 @@ nytg.budget_array_data.forEach(function(location, i) {
         i = 0;
     }
     location.name = locationsData[i].name; // add a city
-    location.department = locationsData[i].change; //add a country for display
+    location.city = locationsData[i].change; //add a country for display
     //location.change = mapCountriesToChange[locationsData[i].change];
 });
 
@@ -433,7 +433,8 @@ nytg.Chart = function(){
                     isNegative: (n[this.currentYearDataColumn] < 0),
                     positions: n.positions,
                     x:Math.random() * 1000,
-                    y:Math.random() * 1000
+                    y:Math.random() * 1000,
+                    city: n['city'],
                 }
                 if (n.positions.total) {
                     out.x = n.positions.total.x + (n.positions.total.x - (that.width / 2)) * 0.5;
@@ -545,7 +546,7 @@ nytg.Chart = function(){
                     d3.select("#nytg-tooltip .nytg-name").html(that.nameFormat(d.name))
 
                     d3.select("#nytg-tooltip .nytg-discretion").text(that.discretionFormat(d.discretion))
-                    d3.select("#nytg-tooltip .nytg-department").text(d.group)
+                    d3.select("#nytg-tooltip .nytg-department").text(d.city)
                 })
                 .on("mouseout",function(d,i) {
                     d3.select(this)
