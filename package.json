@@ -44,5 +44,13 @@
   "bugs": {
     "url": "https://github.com/Endouble/JS-Training/issues"
   },
-  "homepage": "https://github.com/Endouble/JS-Training#readme"
+  "homepage": "https://github.com/Endouble/JS-Training#readme",
+  "dependencies": {
+    "chart.js": "^2.3.0",
+    "geohash": "0.0.1",
+    "kysonic-es6-xhr": "0.0.5",
+    "leaflet": "^1.0.1",
+    "leaflet.markercluster": "^1.0.0",
+    "whatwg-fetch": "^1.0.0"
+  }
 }
