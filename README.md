@@ -1,1 +1,3 @@
-# where_good_employers_are
+node_modules/
+.idea
+*.log
